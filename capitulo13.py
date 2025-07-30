@@ -3677,15 +3677,240 @@ def capitulo13():
     descripcionCapitulo13.font.size = Pt(12)
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
+    #########################
+    ### Tabla del capítulo 13.5.3 ###
+    #########################
+    filas = 2
+    columnas = 11
+    tabla13b = doc.add_table(rows=filas, cols=columnas, style='Table Grid')
+    #tabla13b.alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+    for cols in range(columnas):
+        cell = tabla13b.cell(0, cols)
+        cell_background_color(cell, '0070C0')
+
+        for rows in range(filas):
+            cell = tabla13b.cell(rows, cols)
+            t13b = cell.paragraphs[0].add_run(' ')
+            t13b.font.name = 'Arial'
+            t13b.font.size = Pt(12)
+            cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
+            cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Descripcion del capitulo 13.5.3 ###
+    #########################
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run(
+        "Fuente: SIE - Inflación (banxico.org.mx) "
+    )
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(12)
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run(
+        "Se utilizó la media geométrica el cual es de _____ % la tasa de inflación promedio."
+    )
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(12)
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run(
+        "Ahora que ya se sabe cómo calcular el primer término de los dos que componen la TMAR, hace falta preguntar ¿cuál debe ser el premio al riesgo que deba ganarse? "
+        "En términos generales se considera que un premio al riesgo, considerado ahora como la tasa de crecimiento real invertido, habiendo compensado los efectos inflación, "
+        "debe ser de entre  _____________%."
+    )
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(12)
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run(
+        "Para ellos se tomó como base los riesgos de acuerdo al tipo de proyecto siendo estos los siguientes riesgos:"
+    )
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(12)
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run(
+        "Bajo Riesgo. - Si la demanda de tu producto o servicio es estable y No Existe competencia fuerte de otros productos, el porcentaje de riesgo puede ir de _________ %."
+    )
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(12)
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run(
+        "Riesgo Medio. - Son proyectos que tiene una demanda variable y competencia considerable, se estima un porcentaje de __________ %"
+    )
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(12)
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run(
+        "Riesgo Alto. - Son Negocios en los que el precio del producto cambia mucho debido a la oferta y demanda, se considera un porcentaje superior a _____ %"
+    )
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(12)
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run(
+        "Para el caso de nuestro proyecto se tomó un riesgo medio del ______%."
+    )
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(12)
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    """
+        |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            TASA MINIMA DE RENDIMIENTO (TMAR)
+        |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    """
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run('FAVOR DE PONER LA TASA MINIMA DE RENDIMIENTO (TMAR) =)')
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    #descripcionCapitulo9_format.space_after = 0
+    #descripcionCapitulo9_format.space_before = 0
+
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(12)
+    descripcionCapitulo13.bold = True
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    ########################################################################################################################################################################
+    ### Hoja en Horizontal para ver contenido del capitulo 13.5.3 ###
+    ########################################################################################################################################################################
+    """
+        ==================================================================================================================================================================
+            El siguiente código muestra cómo se tiene que insertar la hoja en Horizontal.
+        ==================================================================================================================================================================
+    """
+
+    new_section = doc.add_section(WD_SECTION.NEW_PAGE)
+
+    # Cambiar orientación a vertical
+    new_section.orientation = WD_ORIENT.LANDSCAPE
+    new_section.page_width, new_section.page_height = new_section.page_height, new_section.page_width
+    new_section.left_margin = Cm(2)
+    new_section.right_margin = Cm(2.5)
+    new_section.top_margin = Cm(2.5)
+    new_section.bottom_margin = Cm(2.5)
+
+    #########################
+    ### Título de la tabla del capítulo 13.5.3 ###
+    #########################
+    tituloTabla13b = doc.add_paragraph()
+    dti13b = tituloTabla13b.add_run('\nTabla 13.x.- Costos de Ingresos del proyecto.')
+    dti13b_format = tituloTabla13b.paragraph_format
+    dti13b_format.line_spacing = 1.15
+    dti13b_format.space_after = 0
+
+    dti13b.font.name = 'Bookman Old Style'
+    dti13b.font.size = Pt(12)
+    tituloTabla13b.alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+    #########################
+    ### Tabla del capítulo 13.1 ###
+    #########################
+    filas = 20
+    columnas = 13
+    tabla13b = doc.add_table(rows=filas, cols=columnas, style='Table Grid')
+
+    for cols in range(columnas):
+        cell = tabla13b.cell(0, cols)
+        cell_background_color(cell, '0070C0')
+
+        for rows in range(filas):
+            cell = tabla13b.cell(rows, cols)
+            t13b = cell.paragraphs[0].add_run(' ')
+            t13b.font.size = Pt(12)
+
+    """
+        =================================================================================
+            Salto de pagina
+        =================================================================================
+    """
+    doc.add_page_break() # Salto de página
+
+    #########################
+    ### Título de la tabla del capítulo 13.5.3 ###
+    #########################
+    tituloTabla13b = doc.add_paragraph()
+    dti13b = tituloTabla13b.add_run('\nTabla 13.x.- Costos de Egresos del proyecto.')
+    dti13b_format = tituloTabla13b.paragraph_format
+    dti13b_format.line_spacing = 1.15
+    dti13b_format.space_after = 0
+
+    dti13b.font.name = 'Bookman Old Style'
+    dti13b.font.size = Pt(12)
+    tituloTabla13b.alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+    #########################
+    ### Tabla del capítulo 13.1 ###
+    #########################
+    filas = 20
+    columnas = 13
+    tabla13b = doc.add_table(rows=filas, cols=columnas, style='Table Grid')
+
+    for cols in range(columnas):
+        cell = tabla13b.cell(0, cols)
+        cell_background_color(cell, '0070C0')
+
+        for rows in range(filas):
+            cell = tabla13b.cell(rows, cols)
+            t13b = cell.paragraphs[0].add_run(' ')
+            t13b.font.size = Pt(12)
+
+    ########################################################################################################################################################################
+    # Capitulo 13.6
+    ########################################################################################################################################################################
+
+    ########################################################################################################################################################################
+    ### Hoja en Vertical para ver el contenido del capítulo 13.6 ###
+    ########################################################################################################################################################################
+    """
+        ==================================================================================================================================================================
+            El siguiente código muestra cómo se tiene que insertar la hoja en Vertical:
+        ==================================================================================================================================================================
+    """
+
+    new_section = doc.add_section(WD_SECTION.NEW_PAGE)
+
+    # Cambiar orientación a vertical
+    new_section.orientation = WD_ORIENT.PORTRAIT
+    new_section.page_width, new_section.page_height = new_section.page_height, new_section.page_width
+    new_section.left_margin = Cm(2.5)
+    new_section.right_margin = Cm(2.5)
+    new_section.top_margin = Cm(2)
+    new_section.bottom_margin = Cm(2.5)
+
+    #########################
+    ### Titulo del capitulo 13.6 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.- Estimación de los beneficios sociales')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -3695,10 +3920,53 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('La generación de empleo es parte fundamental de cualquier región para su desarrollo y a la vez proporcionar a la población una mejor calidad de vida tal y como lo establecen los preceptos de desarrollo social, por las características propias de las actividades de aprovechamiento, se ofrecerán áreas de trabajos directos e indirectos a pobladores del municipio y de municipios cercanos, en todas las etapas del proyecto, desde el desmonte hasta la puesta en marcha, Derivado de esta distribución actividades contempladas para la implementación del proyecto se considera la generación de un total de ___ empleos directos beneficiando a una población de más de ____ personas durante la ejecución del proyecto así mismo se podrán generar más ____ empleos adicionales indirectos que juntos harán una derrama económica de más de $___ millones en la operación del proyecto contemplando la preparación del sitio la construcción y de operación del proyecto, beneficiando en primer lugar a la región de __________________, con la generación de empleos, percibiendo una retribución monetaria en la etapa de preparación y construcción,  lo que se traduce en bienestar social de más de _____ familias el cual incrementara la calidad de vida y mantendrá sin problemas económicos durante ')
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    #descripcionCapitulo9_format.space_after = 0
+    #descripcionCapitulo9_format.space_before = 0
+
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(12)
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    #########################
+    ### Título de la tabla del capítulo 13.6 ###
+    #########################
+    tituloTabla13b = doc.add_paragraph()
+    dti13b = tituloTabla13b.add_run('\nTabla 13.x.- Costos de Egresos del proyecto.')
+    dti13b_format = tituloTabla13b.paragraph_format
+    dti13b_format.line_spacing = 1.15
+    dti13b_format.space_after = 0
+
+    dti13b.font.name = 'Bookman Old Style'
+    dti13b.font.size = Pt(12)
+    tituloTabla13b.alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+    #########################
+    ### Tabla del capítulo 13.6 ###
+    #########################
+    filas = 15
+    columnas = 6
+    tabla13b = doc.add_table(rows=filas, cols=columnas, style='Table Grid')
+
+    for cols in range(columnas):
+        cell = tabla13b.cell(0, cols)
+        cell_background_color(cell, '0070C0')
+
+        for rows in range(filas):
+            cell = tabla13b.cell(rows, cols)
+            t13b = cell.paragraphs[0].add_run(' ')
+            t13b.font.size = Pt(12)
+
+    #########################
+    ### Descripcion del capitulo 13.6 ###
+    #########################
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run('* Los costos de los salarios es en base a los costos del salario mínimo del país, el cual es de ________ pesos')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -3709,14 +3977,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.6.1
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.6.1 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.1.- Medio socioeconómico.')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -3726,10 +3994,10 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6.1 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('En este apartado se analiza la manera en la que las poblaciones asentadas en el área del sistema ambiental se relacionan con su entorno. Se presenta toda la información relevante para comprender el contexto socioeconómico en el que se lleva a cabo la realización y operación del proyecto en mención, la evaluación se realiza y se analiza para el Municipio de ______________ en el cual pertenece el Área de Cambio de uso de Suelo.')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -3740,14 +4008,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.6.1.1
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.6.1.1 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.1.1.- Nombre de la grafica')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -3757,10 +4025,10 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6.1.1 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Poner la grafica de la CONAPO, usar API')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -3771,14 +4039,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.6.1.2
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.6.1.2 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.1.2.- Nombre de la grafica')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -3788,10 +4056,10 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6.1.2 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Poner la grafica de la CONAPO, usar API')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -3802,14 +4070,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.6.1.3
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.6.1.3 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.1.3.- Nombre de la grafica')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -3819,10 +4087,10 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6.1.3 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Poner la grafica de la CONAPO, usar API')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -3833,14 +4101,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.6.1.4
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.6.1.4 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.1.4.- Nombre de la grafica')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -3850,10 +4118,10 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6.1.4 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Poner la grafica de la CONAPO, usar API')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -3864,14 +4132,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.6.1.5
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.6.1.5 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.1.5.- Crecimiento poblacional')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -3881,10 +4149,21 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6.1.5 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('El crecimiento poblacional de la ciudad de ___________ ha registrado los siguientes datos: a partir del año 1990 hasta el 2020, siendo en el este ultimo de _______ habitantes:')
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    #descripcionCapitulo9_format.space_after = 0
+    #descripcionCapitulo9_format.space_before = 0
+
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(12)
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run('Poner las imagenes')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -3895,14 +4174,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.6.1.6
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.6.1.6 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.1.6.- Población económicamente activa (PEA)')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -3912,10 +4191,64 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6.1.6 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Se entiende por población económicamente activa al grupo de personas en edad de trabajar que realizan una actividad generadora de bienes y servicios a los que se le imputa valor agregado. ')
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    #descripcionCapitulo9_format.space_after = 0
+    #descripcionCapitulo9_format.space_before = 0
+
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(12)
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    #########################
+    ### Título de la tabla del capítulo 13.6.1.6 ###
+    #########################
+    tituloTabla13b = doc.add_paragraph()
+    dti13b = tituloTabla13b.add_run('\nTabla 13.x.- Población Económicamente activa.')
+    dti13b_format = tituloTabla13b.paragraph_format
+    dti13b_format.line_spacing = 1.15
+    dti13b_format.space_after = 0
+
+    dti13b.font.name = 'Bookman Old Style'
+    dti13b.font.size = Pt(12)
+    tituloTabla13b.alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+    #########################
+    ### Tabla del capítulo 13.6.1.6 ###
+    #########################
+    filas = 6
+    columnas = 6
+    tabla13b = doc.add_table(rows=filas, cols=columnas, style='Table Grid')
+
+    for cols in range(columnas):
+        cell = tabla13b.cell(0, cols)
+        cell_background_color(cell, '0070C0')
+
+        for rows in range(filas):
+            cell = tabla13b.cell(rows, cols)
+            t13b = cell.paragraphs[0].add_run(' ')
+            t13b.font.size = Pt(12)
+
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run('Fuente: Elaboración propia, con datos de censo de Población y vivienda 2020')
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    #descripcionCapitulo9_format.space_after = 0
+    #descripcionCapitulo9_format.space_before = 0
+
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(10)
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    #########################
+    ### Descripcion del capitulo 13.6.1.6 ###
+    #########################
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run('La población económicamente activa del municipio es de _______ personas de las cuales ____ son hombre y _____% son mujeres, mientras que la población no económicamente activa es de 33,855 personas siendo de estas un _____% hombre y _____% son mujeres.')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -3926,14 +4259,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.6.1.7
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.6.1.7 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.1.7.- Uso del Suelo.')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -3943,10 +4276,10 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6.1.7 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Descripcion del capitulo')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -3957,14 +4290,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.6.1.8
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.6.1.8 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.1.8.- Recursos Naturales.')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -3974,10 +4307,10 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6.1.8 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Descripcion del capitulo')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -3988,14 +4321,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.6.1.9
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.6.1.9 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.1.9.- Monumentos Históricos')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -4005,10 +4338,10 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6.1.9 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Descripcion del capitulo')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -4019,14 +4352,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.6.1.10
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.6.1.10 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.1.10.- Fiestas, Danza y Tradiciones')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -4036,10 +4369,10 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6.1.10 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Descripcion del capitulo')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -4050,14 +4383,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.6.1.11
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.6.1.11 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.1.11.- Gastronomía')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -4067,10 +4400,10 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6.1.11 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Descripcion del capitulo')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -4081,14 +4414,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.6.1.12
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.6.1.12 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.6.1.12.- Centros turísticos')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -4098,10 +4431,10 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.6.1.12 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Descripcion del capitulo')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -4112,14 +4445,14 @@ def capitulo13():
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
-    # Capitulo 13
+    # Capitulo 13.7
     ########################################################################################################################################################################
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo del capitulo 13.7 ###
     #########################
     capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
+    i13 = capitulo13.add_run(f'\nXIII.7.- Conclusiones')
     i13_format = capitulo13.paragraph_format
     i13_format.line_spacing = 1.15
 
@@ -4129,10 +4462,10 @@ def capitulo13():
     capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.7 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('De acuerdo a la valoración de los servicios ambientales que presta el área deja de percibir con el cambio de uso de suelo $___________ pesos, como se muestra a continuación:')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -4142,28 +4475,41 @@ def capitulo13():
     descripcionCapitulo13.font.size = Pt(12)
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
+    #########################
+    ### Título de la tabla del capítulo 13.7 ###
+    #########################
+    tituloTabla13b = doc.add_paragraph()
+    dti13b = tituloTabla13b.add_run('\nTabla 9.1.- Periodo de ejecución por etapa.')
+    dti13b_format = tituloTabla13b.paragraph_format
+    dti13b_format.line_spacing = 1.15
+    dti13b_format.space_after = 0
+
+    dti13b.font.name = 'Bookman Old Style'
+    dti13b.font.size = Pt(12)
+    tituloTabla13b.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Tabla del capítulo 13.7 ###
     #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
+    filas = 6
+    columnas = 2
+    tabla13b = doc.add_table(rows=filas, cols=columnas, style='Table Grid')
 
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+    for cols in range(columnas):
+        cell = tabla13b.cell(0, cols)
+        cell_background_color(cell, '0070C0')
+
+        for rows in range(filas):
+            cell = tabla13b.cell(rows, cols)
+            t13b = cell.paragraphs[0].add_run(' ')
+            t13b.font.size = Pt(12)
+            t13b.font.name = 'Arial'
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.7 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Con los datos que anteceden se tiene que el proyecto es más rentable económicamente que los beneficios económicos que prestaría el área de estudio si este genera un bien o servicio económico, teniendo los tres indicadores siguientes:')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -4173,28 +4519,20 @@ def capitulo13():
     descripcionCapitulo13.font.size = Pt(12)
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
-
-    #########################
-    ### Titulo del capitulo 13 ###
-    #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
-
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    #########################
-    ### Descripcion del capitulo 13 ###
-    #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Favor de poner los indicadores Financieros =)')
+    descripcionCapitulo13_format = di13.paragraph_format
+    descripcionCapitulo13_format.line_spacing = 1.15
+    #descripcionCapitulo9_format.space_after = 0
+    #descripcionCapitulo9_format.space_before = 0
+
+    descripcionCapitulo13.font.name = 'Arial'
+    descripcionCapitulo13.font.size = Pt(12)
+    descripcionCapitulo13.bold = True
+    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    di13 = doc.add_paragraph()
+    descripcionCapitulo13 = di13.add_run('Se tiene que la van es mayor a cero dando un resultado positivo de $ ________ Pesos, para la TIR se tiene que para que la inversión sea igual a cero se requiere una tasa interna de retorno de _______%, mientras que la TMAR se tiene una tasa de riesgo más inflación del ___%, siendo la tasa mínima de aceptación de __%, siendo el proyecto viable., con una relación beneficio costo es de ___.')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -4204,28 +4542,35 @@ def capitulo13():
     descripcionCapitulo13.font.size = Pt(12)
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
+    #########################
+    ### Grafica del capitulo 13.7 ###
+    #########################
+    """ 
+        El siguiente codigo muestra como se tiene que insertar la imagen, mapa o grafico.
+    """
+    imagenCapitulo5_parrafo = doc.add_paragraph()
+    imagenCapitulo5_run = imagenCapitulo5_parrafo.add_run('')
+    imagenCapitulo5_parrafo.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    imagenCapitulo5_run = doc.add_picture('capitulo13/grafico.jpg', width=Cm(12.24), height=Cm(8.18))
 
     #########################
-    ### Titulo del capitulo 13 ###
+    ### Titulo de la grafica del capitulo 13.7 ###
     #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
+    tituloGrafico5 = doc.add_paragraph()
+    dgi5 = tituloGrafico5.add_run('Grafica 1.- Nombre de la graficas')
+    dgi5_format = tituloGrafico5.paragraph_format
+    dgi5_format.line_spacing = 1.15
+    dgi5_format.space_after = 0
 
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+    dgi5.font.name = 'Bookman Old Style'
+    dgi5.font.size = Pt(12)
+    tituloGrafico5.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
     #########################
-    ### Descripcion del capitulo 13 ###
+    ### Descripcion del capitulo 13.7 ###
     #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Los costos que dejaría de percibir el área de cambio de uso de suelo considerando solamente los servicios ambientales, captura de carbono, el valor de la flora y la fauna, dejaría de percibir la cantidad de $______________ , Pesos, sin embargo, la ganancia del proyecto con todos los gastos es superior a los ______ millones por lo que es más productivo el nuevo uso que el suelo actual de área de cambo de uso de suelo.')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -4235,28 +4580,8 @@ def capitulo13():
     descripcionCapitulo13.font.size = Pt(12)
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
-
-    #########################
-    ### Titulo del capitulo 13 ###
-    #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
-
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    #########################
-    ### Descripcion del capitulo 13 ###
-    #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('Bajo una perspectiva de valoración, el cambio de uso de suelo propuesto por la ejecución del proyecto _______________________________________ representa una afectación completa de los servicios ambientales que presta la vegetación forestal. En este caso, la remoción de la cubierta vegetal repercutirá en la disminución de la recarga de los mantos acuíferos, aunado a esto la zona donde se pretende desarrollar el proyecto no cuenta con cualidades para prestar servicios ambientales que tengan un valor cultural, religioso o como espacios importantes para la recreación.')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -4266,28 +4591,8 @@ def capitulo13():
     descripcionCapitulo13.font.size = Pt(12)
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
-
-    #########################
-    ### Titulo del capitulo 13 ###
-    #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
-
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    #########################
-    ### Descripcion del capitulo 13 ###
-    #########################
     di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
+    descripcionCapitulo13 = di13.add_run('En otras palabras, los principales impactos más notorios ocurrirán sobre los recursos naturales Geomorfología, Suelo, Flora y Paisaje.')
     descripcionCapitulo13_format = di13.paragraph_format
     descripcionCapitulo13_format.line_spacing = 1.15
     #descripcionCapitulo9_format.space_after = 0
@@ -4297,284 +4602,30 @@ def capitulo13():
     descripcionCapitulo13.font.size = Pt(12)
     di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
+    lista_paisaje = [
+        "En el caso del paisaje, que durante muchos años será apreciable a la distancia, modificando su topografía; siendo este uno de los factores de mayor alteración.",
+        "No se pone en riesgo el conjunto paisajístico de la zona dado que el área del proyecto y en sus alrededores no se encuentran áreas eco turísticas o en las que se promuevan su desarrollo y que pudieran ser impactados con la implementación del proyecto en el sistema ambiental _________________________________________ __________________________________ y aledaños a ella.",
+        "El área sujeta a estudio comprende una superficie total de ________ ha, de las cuales serán removidas en su totalidad, donde solicita el cambio de uso de suelo, cuyas características topográficas de ________________________________, actualmente ________________, por lo que se creará el proyecto para la ____________________.",
+        "El terreno es rustico, _________________ __________. La mayor cobertura vegetal es de ___________________.",
+        "De acuerdo a las evaluaciones realizadas en la flora y fauna, se puede determinar que la ejecución del presente proyecto no afectará a especies ya que estas serán rescatadas si así se requiere. Aunque será retirada la cubierta vegetal de la superficie del proyecto, esto no pondrá en riesgo la biodiversidad en ámbito del sistema ambiental hidrológica, debido a la escasa presencia de especies y a lo común de su distribución. Se hará el rescate y reubicación del estrato suculento.",
+        "Los impactos ambientales que genera el desarrollo de las actividades correspondientes al cambio de utilización de terreno forestal para el ___________ _______________, son drásticos debido a la naturaleza del proyecto. Sin embargo, estos son focalizados por lo que únicamente se manifiestan en el área, sin afectar a áreas o poblaciones aledañas.",
+        "El polígono del área sujeta de cambio de uso de suelo, cuenta con una estimación de susceptibilidad a la erosión hídrica en las condiciones actuales principalmente de _____ mm/ha, en la erosión eólica presenta _____ mm/ha, con la implementación del proyecto incrementa en ____ mm/ha, en erosión eólica, y hasta ______ mm/ha, en erosión hídrica.",
+        "La tasa máxima permisible de pérdidas de suelo es de 10 Ton/ha/año; mayores pérdidas, como en el caso del polígono propuesto, significan degradación (SAGARPA, 2000).",
+        "La erosión con proyecto, anteriormente calculada considera que no existiera cobertura del suelo (suelo desnudo) y no se tuvieran prácticas de conservación de suelo y del agua.",
+        "De la infiltración podemos deducir que se tiene una infiltración normal en el ACUSTF de ______ mm anuales, al quedar sin vegetación aumenta la evapotranspiración, lo que se dejara de infiltrar en la vigencia del proyecto la cantidad de ______ mm anual, misma que se podrán recuperar con la implementación de las obras de conservación tendiendo una captura anual de _______ mm, mismas que serán filtradas en el cambio de uso de suelo."
+    ]
 
-    #########################
-    ### Titulo del capitulo 13 ###
-    #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
-
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    #########################
-    ### Descripcion del capitulo 13 ###
-    #########################
-    di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
-    descripcionCapitulo13_format = di13.paragraph_format
-    descripcionCapitulo13_format.line_spacing = 1.15
-    #descripcionCapitulo9_format.space_after = 0
-    #descripcionCapitulo9_format.space_before = 0
-
-    descripcionCapitulo13.font.name = 'Arial'
-    descripcionCapitulo13.font.size = Pt(12)
-    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
-
-    #########################
-    ### Titulo del capitulo 13 ###
-    #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
-
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    #########################
-    ### Descripcion del capitulo 13 ###
-    #########################
-    di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
-    descripcionCapitulo13_format = di13.paragraph_format
-    descripcionCapitulo13_format.line_spacing = 1.15
-    #descripcionCapitulo9_format.space_after = 0
-    #descripcionCapitulo9_format.space_before = 0
-
-    descripcionCapitulo13.font.name = 'Arial'
-    descripcionCapitulo13.font.size = Pt(12)
-    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
-
-    #########################
-    ### Titulo del capitulo 13 ###
-    #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
-
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    #########################
-    ### Descripcion del capitulo 13 ###
-    #########################
-    di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
-    descripcionCapitulo13_format = di13.paragraph_format
-    descripcionCapitulo13_format.line_spacing = 1.15
-    #descripcionCapitulo9_format.space_after = 0
-    #descripcionCapitulo9_format.space_before = 0
-
-    descripcionCapitulo13.font.name = 'Arial'
-    descripcionCapitulo13.font.size = Pt(12)
-    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
-
-    #########################
-    ### Titulo del capitulo 13 ###
-    #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
-
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    #########################
-    ### Descripcion del capitulo 13 ###
-    #########################
-    di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
-    descripcionCapitulo13_format = di13.paragraph_format
-    descripcionCapitulo13_format.line_spacing = 1.15
-    #descripcionCapitulo9_format.space_after = 0
-    #descripcionCapitulo9_format.space_before = 0
-
-    descripcionCapitulo13.font.name = 'Arial'
-    descripcionCapitulo13.font.size = Pt(12)
-    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
-
-    #########################
-    ### Titulo del capitulo 13 ###
-    #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
-
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    #########################
-    ### Descripcion del capitulo 13 ###
-    #########################
-    di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
-    descripcionCapitulo13_format = di13.paragraph_format
-    descripcionCapitulo13_format.line_spacing = 1.15
-    #descripcionCapitulo9_format.space_after = 0
-    #descripcionCapitulo9_format.space_before = 0
-
-    descripcionCapitulo13.font.name = 'Arial'
-    descripcionCapitulo13.font.size = Pt(12)
-    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
-
-    #########################
-    ### Titulo del capitulo 13 ###
-    #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
-
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    #########################
-    ### Descripcion del capitulo 13 ###
-    #########################
-    di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
-    descripcionCapitulo13_format = di13.paragraph_format
-    descripcionCapitulo13_format.line_spacing = 1.15
-    #descripcionCapitulo9_format.space_after = 0
-    #descripcionCapitulo9_format.space_before = 0
-
-    descripcionCapitulo13.font.name = 'Arial'
-    descripcionCapitulo13.font.size = Pt(12)
-    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
-
-    #########################
-    ### Titulo del capitulo 13 ###
-    #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
-
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    #########################
-    ### Descripcion del capitulo 13 ###
-    #########################
-    di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
-    descripcionCapitulo13_format = di13.paragraph_format
-    descripcionCapitulo13_format.line_spacing = 1.15
-    #descripcionCapitulo9_format.space_after = 0
-    #descripcionCapitulo9_format.space_before = 0
-
-    descripcionCapitulo13.font.name = 'Arial'
-    descripcionCapitulo13.font.size = Pt(12)
-    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
-
-    #########################
-    ### Titulo del capitulo 13 ###
-    #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
-
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    #########################
-    ### Descripcion del capitulo 13 ###
-    #########################
-    di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
-    descripcionCapitulo13_format = di13.paragraph_format
-    descripcionCapitulo13_format.line_spacing = 1.15
-    #descripcionCapitulo9_format.space_after = 0
-    #descripcionCapitulo9_format.space_before = 0
-
-    descripcionCapitulo13.font.name = 'Arial'
-    descripcionCapitulo13.font.size = Pt(12)
-    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    ########################################################################################################################################################################
-    # Capitulo 13
-    ########################################################################################################################################################################
-
-    #########################
-    ### Titulo del capitulo 13 ###
-    #########################
-    capitulo13 = doc.add_paragraph()
-    i13 = capitulo13.add_run(f'\n')
-    i13_format = capitulo13.paragraph_format
-    i13_format.line_spacing = 1.15
-
-    i13.font.name = 'Arial'
-    i13.font.size = Pt(12)
-    i13.font.bold = True
-    capitulo13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    #########################
-    ### Descripcion del capitulo 13 ###
-    #########################
-    di13 = doc.add_paragraph()
-    descripcionCapitulo13 = di13.add_run('')
-    descripcionCapitulo13_format = di13.paragraph_format
-    descripcionCapitulo13_format.line_spacing = 1.15
-    #descripcionCapitulo9_format.space_after = 0
-    #descripcionCapitulo9_format.space_before = 0
-
-    descripcionCapitulo13.font.name = 'Arial'
-    descripcionCapitulo13.font.size = Pt(12)
-    di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+    # Bucle para agregar cada ítem como viñeta al documento
+    for item in lista_paisaje:
+        di13 = doc.add_paragraph(style='List Bullet')  # Estilo de lista con viñeta
+        descripcionCapitulo13 = di13.add_run(item)
+        
+        # Formato de cada ítem
+        descripcionCapitulo13_format = di13.paragraph_format
+        descripcionCapitulo13_format.line_spacing = 1.15
+        descripcionCapitulo13.font.name = 'Arial'
+        descripcionCapitulo13.font.size = Pt(12)
+        di13.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
     ########################################################################################################################################################################
     # Guardar Documento

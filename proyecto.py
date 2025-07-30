@@ -40,33 +40,33 @@ Hacer documentos en Word con Python
         Tablas y Celdas
     ============================================================
     #########################
-    ### Título de la tabla del capítulo 13.1 ###
+    ### Título de la tabla del capítulo 16 ###
     #########################
-    tituloTabla13b = doc.add_paragraph()
-    dti13b = tituloTabla13b.add_run('\nTabla 9.1.- Periodo de ejecución por etapa.')
-    dti13b_format = tituloTabla13b.paragraph_format
-    dti13b_format.line_spacing = 1.15
-    dti13b_format.space_after = 0
+    tituloTabla16b = doc.add_paragraph()
+    dti16b = tituloTabla16b.add_run('\n')
+    dti16b_format = tituloTabla16b.paragraph_format
+    dti16b_format.line_spacing = 1.15
+    dti16b_format.space_after = 0
 
-    dti13b.font.name = 'Bookman Old Style'
-    dti13b.font.size = Pt(12)
-    tituloTabla13b.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    dti16b.font.name = 'Bookman Old Style'
+    dti16b.font.size = Pt(12)
+    tituloTabla16b.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
     #########################
-    ### Tabla del capítulo 13.1 ###
+    ### Tabla del capítulo 16 ###
     #########################
     filas = 1
     columnas = 2
-    tabla13b = doc.add_table(rows=filas, cols=columnas, style='Table Grid')
+    tabla16b = doc.add_table(rows=filas, cols=columnas, style='Table Grid')
 
-    for cols in range(filas):
-        cell = tabla13b.cell(0, cols)
+    for cols in range(columnas):
+        cell = tabla16b.cell(0, cols)
         cell_background_color(cell, '0070C0')
 
-        for rows in range(columnas):
-            cell = tabla13b.cell(rows, cols)
-            t13b = cell.paragraphs[0].add_run(' ')
-            t13b.font.size = Pt(12)
+        for rows in range(filas):
+            cell = tabla16b.cell(rows, cols)
+            t16b = cell.paragraphs[0].add_run(' ')
+            t16b.font.size = Pt(12)
 
     ============================================================
         Guardar Documento
